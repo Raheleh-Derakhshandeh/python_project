@@ -2,7 +2,7 @@ product_names = []
 product_is_bought = []
 product_prices = []
 for i in range(100):
-  answer = input("help, add, display, edit, remove, buy, details, exit: ")
+  answer = input("help, add, display, edit, remove, search, buy, details, exit: ")
   if answer == "help":
     help_text = """
       Tasks:
@@ -10,6 +10,7 @@ for i in range(100):
       - remove: Removes a specified product.
       - edit: Edits a product.
       - display: Displays all products.
+      - search: Search a product.
       - buy: Buys a product.
       - help: Displays this help text.
       - exit: Exits the program.
@@ -58,6 +59,15 @@ for i in range(100):
         print(f"{new_name} : already exists!")
     else:
       print(f"{old_name}: not found!")
+  elif answer == "search":
+    name = input("product name: ")
+    if name in product_names:
+      ind = product_names.index(name)
+      bought = product_is_bought[ind]
+      price = product_prices[ind]
+      print(f"{name} ==> bought: {bought}, price: {price}")
+    else:
+      print(f"{name} : not found!")
   elif answer == "details":
     total = len(product_names)
     not_purchased = product_is_bought.count(False)
