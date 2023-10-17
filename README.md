@@ -1,8 +1,9 @@
 # python
 ##### Hello
 *Rahele*
-__Derakhshande
+____ Derakhshande
+
+'''python
+print("hello")
 '''
-num=12
-print(num)
-'''
+
