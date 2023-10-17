@@ -1,9 +1,9 @@
 # python
 ##### Hello
 *Rahele*
-____ Derakhshande
 
-'''python
-print("hello")
-'''
+```python
+num1=20
+print(num1)
+```
 
